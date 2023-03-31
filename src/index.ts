@@ -1,12 +1,13 @@
 /*
   Function
-  - Optional and Default Parameters
-
-  - In JavaScript, Every Parameter Is Optional => "undefined" If You Didnt Use It
-  - "?" Optional Parameter
+  - Rest Parameter
+  - What About Float => All Is Under Type Number
 */
 
-function showData(name?: string, age?: number, contry?: string){
-  return `${name} - ${age} - ${contry}`
+function addAll (...nums: number[]): number{
+  let result = 0;
+  for(let num of nums){result += num}
+  return result;
 }
-console.log(showData())
+
+console.log(addAll(1,2,3,4,5, 10.5,+true))
