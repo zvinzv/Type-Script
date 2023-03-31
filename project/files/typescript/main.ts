@@ -1,18 +1,20 @@
-// function reportErrors(username, age: number) {
-//   let rank = "Professor";
-//   return `Username: ${username}`;
-//   console.log("We Will Not Reach Here");
+// let nothing;
+// let theName: string = "Elzero";
+// function showMyDetails(a = "", b = "", c) {
+//   return `${a}${b}${c}`;
 // }
 
-// console.log(reportErrors("Elzero", 40));
+// // Replace ???? With The Available Variables As Argument To Get The Result
+// console.log(showMyDetails(????)); // Elzero
 
-// Solve Assignment 05
+// Solve Assginment 06
 
-/*
-[1] - tsc --init
-[2] - open tsconfig.json And Edit Below {==>"REMOVE COMMENT FROM 'tsconfig.json' TO APPLY"<==} :-
-[2.1] - "noUnusedLocals": true, => for warring about unused variable.
-[2.2] - "noUnusedParameters": true, => for warring about unused Parameters.
-[2.3] - "noImplicitAny": false, => for warring about Type Annotations.
-[2.4] - "allowUnreachableCode": false, => for warring about error reporting for unreachable code.
-*/
+// let nothing;
+let nothing: undefined;
+let theName: string = "Elzero";
+function showMyDetails(a = "", b = "", c: string) {
+  return `${a}${b}${c}`;
+}
+
+// Replace ???? With The Available Variables As Argument To Get The Result
+console.log(showMyDetails(nothing, nothing, theName)); // Elzero

@@ -1,1 +1,1 @@
-{"version":3,"file":"main.js","sourceRoot":"","sources":["../../../project/files/typescript/main.ts"],"names":[],"mappings":""}
+{"version":3,"file":"main.js","sourceRoot":"","sources":["../../../project/files/typescript/main.ts"],"names":[],"mappings":";AAYA,IAAI,OAAkB,CAAC;AACvB,IAAI,OAAO,GAAW,QAAQ,CAAC;AAC/B,SAAS,aAAa,CAAC,CAAC,GAAG,EAAE,EAAE,CAAC,GAAG,EAAE,EAAE,CAAS;IAC9C,OAAO,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,EAAE,CAAC;AACxB,CAAC;AAGD,OAAO,CAAC,GAAG,CAAC,aAAa,CAAC,OAAO,EAAE,OAAO,EAAE,OAAO,CAAC,CAAC,CAAC"}
