@@ -1,9 +1,27 @@
 /*
-  Type Annotations With Multidimensional Arrays
+  Type Annotations With Functions
+
+  - noImplicitAny
+
+  - noImplicitReturns
+  --- Will Check All Code Paths In A Function To Ensure They Return A Value
+
+  - noUnusedLocals
+  --- Report Errors On Unused Local Variables
+
+  - noUnusedParameters
+  --- Report Errors On Unused Parameters In Functions.
 */
 
-let arry1: number[] = [1,2,3,4];
-let arry2: string[] = ["A", "B", "C", "D"];
-let arry3: (string | number)[] = [1, 2, 3, 4, "A", "B", "C", "D"];
 
-let arry4: (string | number | (any)[])[] = [1, 2, 3, 4, "A", "B", ["C", "D"], "E", [1, "2", true]]
+let showMsg = true;
+
+function showDetails(name: string, age: number, salary: number): string { // output string || input string-number
+  let test = 10;
+  if (showMsg) {
+    return `Hello ${name}, Age Is ${age}, Salary Is ${salary} , Test Varabel ${test}`;
+  }
+  return `No Data To Show`
+}
+
+console.log(showDetails("Osama", 40, 3000));
