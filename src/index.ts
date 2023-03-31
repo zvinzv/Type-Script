@@ -1,27 +1,12 @@
 /*
-  Type Annotations With Functions
+  Function
+  - Optional and Default Parameters
 
-  - noImplicitAny
-
-  - noImplicitReturns
-  --- Will Check All Code Paths In A Function To Ensure They Return A Value
-
-  - noUnusedLocals
-  --- Report Errors On Unused Local Variables
-
-  - noUnusedParameters
-  --- Report Errors On Unused Parameters In Functions.
+  - In JavaScript, Every Parameter Is Optional => "undefined" If You Didnt Use It
+  - "?" Optional Parameter
 */
 
-
-let showMsg = true;
-
-function showDetails(name: string, age: number, salary: number): string { // output string || input string-number
-  let test = 10;
-  if (showMsg) {
-    return `Hello ${name}, Age Is ${age}, Salary Is ${salary} , Test Varabel ${test}`;
-  }
-  return `No Data To Show`
+function showData(name?: string, age?: number, contry?: string){
+  return `${name} - ${age} - ${contry}`
 }
-
-console.log(showDetails("Osama", 40, 3000));
+console.log(showData())

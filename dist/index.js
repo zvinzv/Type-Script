@@ -1,11 +1,6 @@
 "use strict";
-let showMsg = true;
-function showDetails(name, age, salary) {
-    let test = 10;
-    if (showMsg) {
-        return `Hello ${name}, Age Is ${age}, Salary Is ${salary} , Test Varabel ${test}`;
-    }
-    return `No Data To Show`;
+function showData(name, age, contry) {
+    return `${name} - ${age} - ${contry}`;
 }
-console.log(showDetails("Osama", 40, 3000));
+console.log(showData());
 //# sourceMappingURL=index.js.map
