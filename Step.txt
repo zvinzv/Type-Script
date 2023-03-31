@@ -1,0 +1,7 @@
+[1] - Instal Node.js
+[2] - Check Node.js on cmd by write "node -v" 
+[3] - Instal TypeScript by write "npm i -g typescript"
+[4] - Check TypeScript on cmd by write "tsc -v"
+[5] - Create TS File
+[6] - Compile JS File
+[7] - Check TS Playground
