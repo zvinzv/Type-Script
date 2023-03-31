@@ -1,8 +1,7 @@
 "use strict";
-function calculate(numOne, numTwo) {
-    return numOne + numTwo;
+function printInfo(valueOne, valueTwo) {
+    return `Value One Is ${typeof valueOne == "number" ? valueOne : `"${valueOne}"`}, Value Two Is ${typeof valueTwo == "number" ? valueTwo : `"${valueTwo}"`}`;
 }
-console.log(calculate(10, 20));
-console.log(calculate("10", "20"));
-console.log(calculate(+true, +true));
+console.log(printInfo(10, 20));
+console.log(printInfo("10", "20"));
 //# sourceMappingURL=main.js.map
