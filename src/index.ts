@@ -1,3 +1,6 @@
+/*
+  Type Annotations With Arrays
+*/
 let all: string | number | boolean;
 
 all = "ZVINZV";
