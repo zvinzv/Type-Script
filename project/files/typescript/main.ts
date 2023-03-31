@@ -1,20 +1,19 @@
-// let nothing;
-// let theName: string = "Elzero";
-// function showMyDetails(a = "", b = "", c) {
-//   return `${a}${b}${c}`;
+// function showMsg(user: number, age: boolean, country: boolean) {
+//   return `${user}${age}${country}`;
 // }
 
-// // Replace ???? With The Available Variables As Argument To Get The Result
-// console.log(showMyDetails(????)); // Elzero
+// console.log(showMsg());
+// console.log(showMsg("Elzero"));
+// console.log(showMsg("Elzero", 40));
+// console.log(showMsg("Elzero", "40", "Egypt"));
 
-// Solve Assginment 06
+// Solve Assignment 07
 
-// let nothing;
-let nothing: undefined;
-let theName: string = "Elzero";
-function showMyDetails(a = "", b = "", c: string) {
-  return `${a}${b}${c}`;
+function showMsg(user?: number | string, age?: boolean | number | string, country?: boolean | string) {
+  return `${user}${age}${country}`;
 }
 
-// Replace ???? With The Available Variables As Argument To Get The Result
-console.log(showMyDetails(nothing, nothing, theName)); // Elzero
+console.log(showMsg());
+console.log(showMsg("Elzero"));
+console.log(showMsg("Elzero", 40));
+console.log(showMsg("Elzero", "40", "Egypt"));
