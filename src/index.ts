@@ -1,13 +1,9 @@
 /*
-  Type Annotations With Arrays
+  Type Annotations With Multidimensional Arrays
 */
-let all: string | number | boolean;
 
-all = "ZVINZV";
-all = 112233;
-all = true;
-let myFriends: string[] = [":)", ":(", "112233"]
+let arry1: number[] = [1,2,3,4];
+let arry2: string[] = ["A", "B", "C", "D"];
+let arry3: (string | number)[] = [1, 2, 3, 4, "A", "B", "C", "D"];
 
-for (let friend of myFriends) {
-  console.log(friend)
-}
+let arry4: (string | number | (any)[])[] = [1, 2, 3, 4, "A", "B", ["C", "D"], "E", [1, "2", true]]
