@@ -1,7 +1,4 @@
-[1] - Instal Node.js
-[2] - Check Node.js on cmd by write "node -v" 
-[3] - Instal TypeScript by write "npm i -g typescript"
-[4] - Check TypeScript on cmd by write "tsc -v"
-[5] - Create TS File
-[6] - Compile JS File
-[7] - Check TS Playground
+[1] - tsc -h / --help <= for show tool
+[2] - tsc -w / --watch <= for watching
+[3] - tsc --init <= for config file
+[4] - Search about init(Config) of typescript
