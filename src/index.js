@@ -2,7 +2,8 @@
 // num = "Elzero";
 // console.log(num);
 
-let age = 40;
+let age = 30;
+
 if (age > 30) {
   console.log("Good");
 } else {
