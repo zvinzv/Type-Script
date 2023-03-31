@@ -1,10 +1,10 @@
-// let num = 10;
-// num = "Elzero";
-// console.log(num);
+let all: string | number | boolean;
 
-let age = 40;
-if (age > 30) {
-  console.log("Good");
-} else {
-  console.log(age.repeat(3));
+all = "ZVINZV";
+all = 112233;
+all = true;
+let myFriends: string[] = [":)", ":(", "112233"]
+
+for (let friend of myFriends) {
+  console.log(friend)
 }
