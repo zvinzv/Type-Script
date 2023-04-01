@@ -1,33 +1,29 @@
 /*
   Data Types
-  - Void
-  --- Function That Will Return Nothing
-  --- Function In JavaScript That Not Return A Value Will Show undefined
-  --- undefined is not void
-  - Never
-  --- Return Type Never Returns
-  --- The Function Doesn't Have A Normal Completion
-  --- It Throws An Error Or Never Finishes Running At All "Infinite Loop"
+  - Enums => Enumerations
+  --- Allow Us To Declare A Set Of Named Constants
+  --- Used For Logical Grouping Collection Of Constants "Collection Of Related Values"
+  --- It Organize Your Code
+  --- By Default Enums Are Number-Based, First Element Is 0
+  --- Theres A Numeric Enums
+  --- Theres A String-Based Enums
+  --- Theres Heterogeneous Enums [String + Number]
 */
 
-const logging = (msg: string): void => {
-  console.log(msg);
-  return;
-};
+const KIDS = 15;
+const EASY = 9;
+const MEDIUM = 6;
+const HARD = 3;
 
-console.log(logging("Iam A Message."));
-console.log("test");
+enum Level {
+  Kids = 15,
+  Easy = 9,
+  Medium = 6,
+  Hard = 3,
+}
 
-const fail = (msg: string) => {
-  throw new Error(msg);
-  // return 16;
-};
+let lvl: string = "Easy";
 
-const alwaysLog = (name: string): never => {
-  while (true) {
-    console.log(name);
-  }
-  // return 16;
-};
-alwaysLog("ZVINZV");
-// console.log("test");
+if (lvl === "Easy") {
+  console.log(`The Level Is ${lvl} And Number Of Seconds Is ${Level.Easy}`);
+}
