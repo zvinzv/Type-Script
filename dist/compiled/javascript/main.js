@@ -1,19 +1,8 @@
 "use strict";
-const compar = (n1, n2) => {
-    if (n1 === n2) {
-        return 0;
-    }
-    else if (n1 > n2) {
-        return 1;
-    }
-    else {
-        return -1;
-    }
-};
-console.log(compar(25, 20));
-console.log(compar(20, 20));
-console.log(compar(15, 20));
-let myNumber1 = 1;
-let myNumber2 = 0;
-let myNumber3 = -1;
+let article = [112, "ZVINZV", true, ["HHH", "CV"]];
+let post = article = [12, "DEV", false, ["Ali", "Jasem"]];
+const [id, title, deploy, [a, b]] = post;
+console.log(id, title, deploy, [a, b][1]);
+console.log(id, title, deploy, [a, b]);
+console.log(id, title, deploy, a, b);
 //# sourceMappingURL=main.js.map

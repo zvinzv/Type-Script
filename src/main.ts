@@ -1,31 +1,16 @@
 /*
   Data Types
-  - Literal Types
+  - Tuple
+  --- Is Another Sort Of Array Type
+  --- We knows Exactly How Many Elements It Contains
+  --- We Knows Which Types It Contains At Specific Positions
 */
 
-type nums = 0 | 1 | -1;
+let article: readonly [number, string, boolean, string[]] = [112, "ZVINZV", true, ["HHH", "CV"]];
+let post = article = [12, "DEV", false, ["Ali", "Jasem"]];
+// article.push(100); >> remove readonly to work.
 
-const compar = (n1: number, n2: number): nums => {
-  if (n1 === n2) {
-    return 0;
-  }
-  else if(n1 > n2){
-    return 1;
-  }
-  else {
-    return -1;
-  }
-}
-
-console.log(compar(25,20))
-console.log(compar(20,20))
-console.log(compar(15,20))
-
-
-let myNumber1: nums = 1
-let myNumber2: nums = 0
-let myNumber3: nums = -1
-
-// let myNumber: nums = "ZVINZV" X
-// let myNumber: nums = true X
-// let myNumber: nums = 99 X
+const [id, title, deploy, [a,b]] = post;
+console.log(id, title, deploy, [a,b][1])
+console.log(id, title, deploy, [a,b])
+console.log(id, title, deploy, a,b)
