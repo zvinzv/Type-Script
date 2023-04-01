@@ -1,16 +1,33 @@
 /*
   Data Types
-  - Tuple
-  --- Is Another Sort Of Array Type
-  --- We knows Exactly How Many Elements It Contains
-  --- We Knows Which Types It Contains At Specific Positions
+  - Void
+  --- Function That Will Return Nothing
+  --- Function In JavaScript That Not Return A Value Will Show undefined
+  --- undefined is not void
+  - Never
+  --- Return Type Never Returns
+  --- The Function Doesn't Have A Normal Completion
+  --- It Throws An Error Or Never Finishes Running At All "Infinite Loop"
 */
 
-let article: readonly [number, string, boolean, string[]] = [112, "ZVINZV", true, ["HHH", "CV"]];
-let post = article = [12, "DEV", false, ["Ali", "Jasem"]];
-// article.push(100); >> remove readonly to work.
+const logging = (msg: string): void => {
+  console.log(msg);
+  return;
+};
 
-const [id, title, deploy, [a,b]] = post;
-console.log(id, title, deploy, [a,b][1])
-console.log(id, title, deploy, [a,b])
-console.log(id, title, deploy, a,b)
+console.log(logging("Iam A Message."));
+console.log("test");
+
+const fail = (msg: string) => {
+  throw new Error(msg);
+  // return 16;
+};
+
+const alwaysLog = (name: string): never => {
+  while (true) {
+    console.log(name);
+  }
+  // return 16;
+};
+alwaysLog("ZVINZV");
+// console.log("test");

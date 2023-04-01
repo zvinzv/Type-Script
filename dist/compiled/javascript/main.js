@@ -1,8 +1,17 @@
 "use strict";
-let article = [112, "ZVINZV", true, ["HHH", "CV"]];
-let post = article = [12, "DEV", false, ["Ali", "Jasem"]];
-const [id, title, deploy, [a, b]] = post;
-console.log(id, title, deploy, [a, b][1]);
-console.log(id, title, deploy, [a, b]);
-console.log(id, title, deploy, a, b);
+const logging = (msg) => {
+    console.log(msg);
+    return;
+};
+console.log(logging("Iam A Message."));
+console.log("test");
+const fail = (msg) => {
+    throw new Error(msg);
+};
+const alwaysLog = (name) => {
+    while (true) {
+        console.log(name);
+    }
+};
+alwaysLog("ZVINZV");
 //# sourceMappingURL=main.js.map
