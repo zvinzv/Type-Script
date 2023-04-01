@@ -1,23 +1,22 @@
-// function yesOrNo(val: number | boolean) : "Yes" | "No" {
-//   return val > 10;
+// function isHeOld(age: number | string[]) : custom | number {
+//   return age > 40;
 // }
 
 // // Do Not Edit Here
-// console.log(yesOrNo("100")); // Error
-// console.log(yesOrNo(30)); // True
-// console.log(yesOrNo(8)); // False
+// console.log(isHeOld("100")); // Error
+// console.log(isHeOld(45)); // "Yes"
+// console.log(isHeOld(30)); // "No"
 
-// Solve Assignment 04
+// Solve Assignment 05
 
-type csx = "Yes" | "No" | "Error" | "UnError";
-
-function yesOrNo(val: number | string): csx {
-  if (typeof val !== "number") {
+type custom = "Yes" | "No" | "Error" | "UnError";
+function isHeOld(age: number | string): custom {
+  if (typeof age !== "number") {
     return "Error";
   } else {
-    if (val > 10) {
+    if (age > 40) {
       return "Yes";
-    } else if (val < 10) {
+    } else if (age < 40) {
       return "No";
     } else {
       return "UnError";
@@ -26,6 +25,6 @@ function yesOrNo(val: number | string): csx {
 }
 
 // Do Not Edit Here
-console.log(yesOrNo("100")); // Error
-console.log(yesOrNo(30)); // True
-console.log(yesOrNo(8)); // False
+console.log(isHeOld("100")); // Error
+console.log(isHeOld(45)); // "Yes"
+console.log(isHeOld(30)); // "No"

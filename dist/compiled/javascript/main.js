@@ -1,13 +1,13 @@
 "use strict";
-function yesOrNo(val) {
-    if (typeof val !== "number") {
+function isHeOld(age) {
+    if (typeof age !== "number") {
         return "Error";
     }
     else {
-        if (val > 10) {
+        if (age > 40) {
             return "Yes";
         }
-        else if (val < 10) {
+        else if (age < 40) {
             return "No";
         }
         else {
@@ -15,7 +15,7 @@ function yesOrNo(val) {
         }
     }
 }
-console.log(yesOrNo("100"));
-console.log(yesOrNo(30));
-console.log(yesOrNo(8));
+console.log(isHeOld("100"));
+console.log(isHeOld(45));
+console.log(isHeOld(30));
 //# sourceMappingURL=main.js.map
