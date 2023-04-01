@@ -1,12 +1,46 @@
 /*
   Data Types
-  - Type Assertions
-  --- Sometime Compiler Doesnt Know The Information We Do
-  --- TypeScript Is Not Performing Any Check To Make Sure Type Assertion Is Valid
-*/
-// let myImag = document.getElementById("my_img") as HTMLImageElement;
-// let myImag = <HTMLImageElement>document.getElementById("my_img");
-// console.log(myImag.src);
+  - Union And Intersection Types
+  --- Union Type
+  ------ The | Symbol Is Used To Create The Union => "Or"
 
-let data: any = "1000";
-console.log((data as string).repeat(2));
+  --- Intersection Type
+  ------ Is A Type That Combines Several Types Into One
+  ------ The & Symbol Is Used To Create An Intersection => "And"
+
+  --- If A Union Is An OR, Then An Intersection Is An AND.
+*/
+
+// let all: number | string = 100;
+
+type A = {
+  one: string;
+  two: number;
+  three: boolean;
+};
+type B = A & {
+  four: number;
+};
+type C = {
+  five: boolean;
+};
+
+type mix = A & C;
+
+const getActions = (btns: mix) => {
+  return [
+    `Hello ${btns.one}`,
+    `Hello ${btns.two}`,
+    `Hello ${btns.three}`,
+    `Hello ${btns.five}`,
+  ];
+};
+
+console.log(
+  getActions({
+    one: "ZVINZV",
+    two: 0,
+    three: false,
+    five: true,
+  })
+);
