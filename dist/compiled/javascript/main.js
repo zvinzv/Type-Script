@@ -1,5 +1,5 @@
 "use strict";
-let myData;
-myData = 1000;
-myData = +true;
+let myInfo;
+myInfo = 1000;
+myInfo = true;
 //# sourceMappingURL=main.js.map
