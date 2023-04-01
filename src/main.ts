@@ -1,25 +1,47 @@
-// // Create Enums + Function Here
+// const user: {
+//   readonly username: string,
+//   age: number,
+//   website?: string,
+//   skills: {
+//     frontEnd: string[],
+//     backEnd: string[]
+//   }
+// } = {
+//   username: "Elzero",
+//   age: 40,
+//   website: "Elzero.org",
+//   skills: {
+//     frontEnd: ["HTML", "CSS", "JS"],
+//     backEnd: ["PHP", "Python"]
+//   }
+// }
 
-// // Output
-// console.log(Game.Easy); // 100
-// console.log(Game.Medium); // 80
-// console.log(Game.Hard); // 30
-// console.log(Game.Insane); // 20
+// // We Need To Remove Error From This Edits
+// user.username = "Osama";
+// user.age = "40";
+// user.skills.backEnd.push(100);
 
-// Solve Assignment 07
+// Solve Assignment 08
 
-// Create Enums + Function Here
-const getInsane = (insa: number, type: number) => type - insa;
+const user: {
+  username: string;
+  age: string;
+  website?: string;
+  skills: {
+    frontEnd: string[];
+    backEnd: (string | number)[];
+  };
+} = {
+  username: "Elzero",
+  age: "40",
+  website: "Elzero.org",
+  skills: {
+    frontEnd: ["HTML", "CSS", "JS"],
+    backEnd: ["PHP", "Python"],
+  },
+};
 
-enum Game {
-  Easy = 100,
-  Medium = Easy - 20,
-  Hard = Medium - Easy / 2,
-  Insane = getInsane(Hard - (Easy - Medium), Hard),
-}
-
-// Output
-console.log(Game.Easy); // 100
-console.log(Game.Medium); // 80
-console.log(Game.Hard); // 30
-console.log(Game.Insane); // 20
+// We Need To Remove Error From This Edits
+user.username = "Osama";
+user.age = "40";
+user.skills.backEnd.push(100);

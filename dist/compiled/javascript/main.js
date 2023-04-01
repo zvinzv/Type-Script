@@ -1,14 +1,14 @@
 "use strict";
-const getInsane = (insa, type) => type - insa;
-var Game;
-(function (Game) {
-    Game[Game["Easy"] = 100] = "Easy";
-    Game[Game["Medium"] = 80] = "Medium";
-    Game[Game["Hard"] = 30] = "Hard";
-    Game[Game["Insane"] = getInsane(Game.Hard - (Game.Easy - Game.Medium), Game.Hard)] = "Insane";
-})(Game || (Game = {}));
-console.log(Game.Easy);
-console.log(Game.Medium);
-console.log(Game.Hard);
-console.log(Game.Insane);
+const user = {
+    username: "Elzero",
+    age: "40",
+    website: "Elzero.org",
+    skills: {
+        frontEnd: ["HTML", "CSS", "JS"],
+        backEnd: ["PHP", "Python"],
+    },
+};
+user.username = "Osama";
+user.age = "40";
+user.skills.backEnd.push(100);
 //# sourceMappingURL=main.js.map
