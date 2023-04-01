@@ -1,38 +1,31 @@
-// // Write Your Code Here
+// function yesOrNo(val: number | boolean) : "Yes" | "No" {
+//   return val > 10;
+// }
 
 // // Do Not Edit Here
-// function showInfo(data: Info) {
-//   console.log(`The Name Is ${data.theName}`);
-//   console.log(`The Age Is ${data.theAge}`);
-// }
-// console.log(showInfo({ theName: "Elzero", theAge: 40 }));
+// console.log(yesOrNo("100")); // Error
+// console.log(yesOrNo(30)); // True
+// console.log(yesOrNo(8)); // False
 
-// function showFullInfo(data: Full) {
-//   console.log(`The Name Is ${data.theName}`);
-//   console.log(`The Age Is ${data.theAge}`);
-//   console.log(`The Country Is ${data.country}`);
-// }
-// console.log(showFullInfo({ theName: "Elzero", theAge: 4, country: "Egypt" }));
+// Solve Assignment 04
 
-// Solve Assignment 03
+type csx = "Yes" | "No" | "Error" | "UnError";
 
-// Write Your Code Here
-type Info = {
-  theName: string;
-  theAge: number;
-  country?: string;
-};
-type Full = Info;
+function yesOrNo(val: number | string): csx {
+  if (typeof val !== "number") {
+    return "Error";
+  } else {
+    if (val > 10) {
+      return "Yes";
+    } else if (val < 10) {
+      return "No";
+    } else {
+      return "UnError";
+    }
+  }
+}
+
 // Do Not Edit Here
-function showInfo(data: Info) {
-  console.log(`The Name Is ${data.theName}`);
-  console.log(`The Age Is ${data.theAge}`);
-}
-console.log(showInfo({ theName: "Elzero", theAge: 40 }));
-
-function showFullInfo(data: Full) {
-  console.log(`The Name Is ${data.theName}`);
-  console.log(`The Age Is ${data.theAge}`);
-  console.log(`The Country Is ${data.country}`);
-}
-console.log(showFullInfo({ theName: "Elzero", theAge: 4, country: "Egypt" }));
+console.log(yesOrNo("100")); // Error
+console.log(yesOrNo(30)); // True
+console.log(yesOrNo(8)); // False
