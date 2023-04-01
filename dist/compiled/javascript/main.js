@@ -1,13 +1,19 @@
 "use strict";
-const getActions = (btns) => {
-    return [`Action For Button Up Is ${btns.up}`, `Action For Button Right Is ${btns.right}`, `Action For Button Down Is ${btns.down}`, `Action For Button Left Is ${btns.left}`, `Action For Button Boolen Is ${btns.x}`];
+const compar = (n1, n2) => {
+    if (n1 === n2) {
+        return 0;
+    }
+    else if (n1 > n2) {
+        return 1;
+    }
+    else {
+        return -1;
+    }
 };
-const [a, b, c, d, e] = getActions({
-    up: "90px",
-    right: "10px",
-    down: "40px",
-    left: "20px",
-    x: true
-});
-console.log(a, b, c, d, e);
+console.log(compar(25, 20));
+console.log(compar(20, 20));
+console.log(compar(15, 20));
+let myNumber1 = 1;
+let myNumber2 = 0;
+let myNumber3 = -1;
 //# sourceMappingURL=main.js.map

@@ -1,28 +1,31 @@
 /*
   Data Types
-  - Advanced Type Alias
+  - Literal Types
 */
 
-type Buttons = {
-  up: string,
-  right: string,
-  down: string,
-  left: string,
+type nums = 0 | 1 | -1;
+
+const compar = (n1: number, n2: number): nums => {
+  if (n1 === n2) {
+    return 0;
+  }
+  else if(n1 > n2){
+    return 1;
+  }
+  else {
+    return -1;
+  }
 }
 
-type Last = Buttons & {
-  x: boolean
-}
-const getActions = (btns: Last) => {
-  return [`Action For Button Up Is ${btns.up}`,`Action For Button Right Is ${btns.right}`,`Action For Button Down Is ${btns.down}`,`Action For Button Left Is ${btns.left}`,`Action For Button Boolen Is ${btns.x}`] as const
-}
+console.log(compar(25,20))
+console.log(compar(20,20))
+console.log(compar(15,20))
 
-const [a,b,c,d, e] = getActions({
-  up: "90px",
-  right: "10px",
-  down: "40px",
-  left: "20px",
-  x: true
-})
 
-console.log(a,b,c,d,e)
+let myNumber1: nums = 1
+let myNumber2: nums = 0
+let myNumber3: nums = -1
+
+// let myNumber: nums = "ZVINZV" X
+// let myNumber: nums = true X
+// let myNumber: nums = 99 X
