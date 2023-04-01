@@ -1,30 +1,29 @@
-// function isHeOld(age: number | string[]) : custom | number {
-//   return age > 40;
-// }
+// post = [100, 200, "Title"]; // Error
+// post = ["Title", 100, true]; // Error
+// post = [100, "Title", true]; // Good
+
+// post.push("Elzero"); // Error => Cant Add
+
+// // Create Destructuring Here
 
 // // Do Not Edit Here
-// console.log(isHeOld("100")); // Error
-// console.log(isHeOld(45)); // "Yes"
-// console.log(isHeOld(30)); // "No"
+// console.log(id); // 100
+// console.log(title); // "Title"
+// console.log(state); // true
 
-// Solve Assignment 05
+// Solve Assignment 06
 
-type custom = "Yes" | "No" | "Error" | "UnError";
-function isHeOld(age: number | string): custom {
-  if (typeof age !== "number") {
-    return "Error";
-  } else {
-    if (age > 40) {
-      return "Yes";
-    } else if (age < 40) {
-      return "No";
-    } else {
-      return "UnError";
-    }
-  }
-}
+// Create Destructuring Here
+let post: readonly [number, string, boolean];
 
+post = [100, 200, "Title"]; // Error
+post = ["Title", 100, true]; // Error
+post = [100, "Title", true]; // Good
+
+post.push("ZVINZV"); // Error => Cant Add
+
+const [id, title, state] = post;
 // Do Not Edit Here
-console.log(isHeOld("100")); // Error
-console.log(isHeOld(45)); // "Yes"
-console.log(isHeOld(30)); // "No"
+console.log(id); // 100
+console.log(title); // "Title"
+console.log(state); // true
