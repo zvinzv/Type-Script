@@ -6,7 +6,7 @@
 // console.log(Game.Hard); // 30
 // console.log(Game.Insane); // 20
 
-// Solve Assignment 06
+// Solve Assignment 07
 
 // Create Enums + Function Here
 const getInsane = (insa: number, type: number) => type - insa;
