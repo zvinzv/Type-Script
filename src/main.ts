@@ -1,29 +1,56 @@
 /*
   Data Types
   - Enums => Enumerations
-  --- Allow Us To Declare A Set Of Named Constants
-  --- Used For Logical Grouping Collection Of Constants "Collection Of Related Values"
-  --- It Organize Your Code
-  --- By Default Enums Are Number-Based, First Element Is 0
-  --- Theres A Numeric Enums
-  --- Theres A String-Based Enums
-  --- Theres Heterogeneous Enums [String + Number]
+  --- Enum Can Refer To Other Enum
+  --- Enum Can Refer To Same Enum
+  --- Enum Can Have Calculations
+  --- Enum Can Have Functions
 */
 
-const KIDS = 15;
-const EASY = 9;
-const MEDIUM = 6;
-const HARD = 3;
+const getHardSeconds = (): number => {
+  return 3;
+};
+
+enum Kids {
+  Five = 25,
+  Seven = 20,
+  Ten = 15,
+}
 
 enum Level {
-  Kids = 15,
+  Kid = Kids.Ten,
   Easy = 9,
-  Medium = 6,
+  Medium = Easy - 3,
   Hard = 3,
+  Extrem = 2,
+  init = +true,
 }
 
-let lvl: string = "Easy";
+const levels: string[] = ["Kids", "Easy", "Medium", "Hard", "Extrem"];
 
-if (lvl === "Easy") {
-  console.log(`The Level Is ${lvl} And Number Of Seconds Is ${Level.Easy}`);
-}
+const newLevels: string[] = levels.map((level) => {
+  return level.toLocaleLowerCase();
+});
+
+const Paly = (level: string): string => {
+  let lvl = level.toLowerCase();
+  if (newLevels.includes(lvl)) {
+    return `The Level Is ${level} And Number Of Seconds Is ${
+      lvl === "kids"
+        ? Level.Kid
+        : lvl === "easy"
+        ? Level.Easy
+        : lvl === "medium"
+        ? Level.Medium
+        : lvl === "hard"
+        ? Level.Hard
+        : lvl === "extrem"
+        ? Level.Extrem
+        : undefined
+    }`;
+  } else {
+    return `Sorry That Not Found.`;
+  }
+};
+
+console.log(Paly("HaRd"));
